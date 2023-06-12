@@ -11,6 +11,8 @@ public class Book {
     private String author;
     private int page;
 
+    public static final String DEFAULT_TITLE = "titolo di default";
+
     //costruttori
     //è un metodo che risponde a queste caratteristiche
     //1. è in genere pubblico
@@ -38,12 +40,46 @@ public class Book {
         this.page = page;
     }
 
-
-
     //getter & setter
+    //metodi pubblici che mi permettono di accedere agli attributi privati della classe
+    //getter --> mi permette di leggere il valore di un attributo
+    //setter --> mi permette di modificare il valore di un attributo
 
+    //getter
+    public String getTitle(){
+        return this.title;
+    }
 
+    public  String getAuthor(){
+        return this.author;
+    }
 
+    public int getPage(){
+        return this.page;
+    }
+    //setter
+
+    public void setTitle(String title){
+        if (title.isEmpty() || title.isBlank()){
+            this.title = DEFAULT_TITLE;
+        }
+        else {
+            this.title = title;
+        }
+    }
+
+    public void setAuthor(String author){
+        if(author.isEmpty() || author.isBlank()){
+            this.author = DEFAULT_TITLE;
+        }
+        else {
+            this.author = author;
+        }
+    }
+
+    public void setPage(int page){
+        this.page= page;
+    }
     //metodi
 
 
@@ -60,3 +96,13 @@ public class Book {
     //override vari (toString, equals, .. )
 
 }
+
+
+
+
+
+
+
+
+
+
