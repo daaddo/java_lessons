@@ -94,7 +94,23 @@ public class Book {
 
 
     //override vari (toString, equals, .. )
-
+    public String contrario(String author){
+        String a = "";
+        for(int i=0;i<author.length();i++){
+            a=author.charAt(i)+a;
+        }
+        return a;
+    }
+    public String vocali(String author){
+        String a= "";
+        for(int i=0;i<author.length();i++){
+            char c = author.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+                a=a+c;
+            }
+        }
+        return a;
+    }
 }
 
 
