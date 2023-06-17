@@ -6,7 +6,6 @@ public class Main {
         System.out.println("Hello world!");
         //[TIPO DELLA CLASSE] [NOME DELL'OGGETTO]  =  new [METODO COSTRUTTORE]
         Book book  = new Book("1984","Giorgio Orwellone",268);
-
         System.out.println("Il libro si intitola: " + book.getTitle());
 
         //carica soldi
@@ -18,5 +17,14 @@ public class Main {
         book.contrario("Giorgio orwellone");
         System.out.println(""+book.contrario("Giorgio orwellone"));
         System.out.println(""+book.vocali("Giorgio orwellone"));
+        Frazione a = new Frazione(3, 5);
+        Frazione b = new Frazione(4, 7);
+        /*a.sum(b);
+        System.out.println(a);
+        a.simplify();
+        System.out.println(a);*/
+        a.moltiplicazione(b);
+        System.out.println(a);
     }
+
 }

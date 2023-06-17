@@ -92,7 +92,10 @@ public class Book {
         return greetings + " " + this.author;
     }
 
-
+    public void merge(Book that){
+        this.title = this.title + that.title;
+        this.page= this.page + that.page;
+    }
     //override vari (toString, equals, .. )
     public String contrario(String author){
         String a = "";
@@ -111,7 +114,11 @@ public class Book {
         }
         return a;
     }
+
+
 }
+
+
 
 
 
