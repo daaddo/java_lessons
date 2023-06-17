@@ -8,6 +8,35 @@ public class Army {
     private Soldier commander;
     private String name;
 
+    public List<Soldier> getSoldiers() {
+        return soldiers;
+    }
+
+    public void setSoldiers(List<Soldier> soldiers) {
+        this.soldiers = soldiers;
+    }
+
+    public Soldier getCommander() {
+        return commander;
+    }
+
+    public void setCommander(Soldier commander) {
+        this.commander = commander;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Army(List<Soldier> soldiers, Soldier commander, String name) {
+        this.soldiers = soldiers;
+        this.commander = commander;
+        this.name = name;
+    }
 
     /**
      * This method add a soldier to the army
@@ -20,10 +49,15 @@ public class Army {
      * The soldier to add
      */
     public void addSoldier(Soldier soldier){
+        this.soldiers.add(soldier);
 
     }
 
     public Soldier findOldestSoldier(){
+        for (Army soldato: soldiers
+             ) {
+
+        }
         return null;
     }
 

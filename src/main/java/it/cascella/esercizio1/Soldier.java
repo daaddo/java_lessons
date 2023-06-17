@@ -24,6 +24,18 @@ public class Soldier {
     }
 
     public Soldier(String name, String surname, int age, int rank) {
+        if(name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty");
+        }
+        if(surname == null || surname.isEmpty()) {
+            throw new IllegalArgumentException("surname cannot be null or empty");
+        }
+        if(age<18) {
+            throw new IllegalArgumentException("age must be higher than 18");
+        }
+        if(rank<=0) {
+            throw new IllegalArgumentException("rank cannot be negative");
+        }
         this.name = name;
         this.surname = surname;
         this.age = age;
