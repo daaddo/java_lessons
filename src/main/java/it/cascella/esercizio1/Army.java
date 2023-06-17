@@ -8,6 +8,16 @@ public class Army {
     private Soldier commander;
     private String name;
 
+    public Army() {
+    }
+
+    public Army(String name) {
+        this.name = name;
+    }
+
+    public List<Soldier> getSoldiers() {
+        return soldiers;
+    }
 
     /**
      * This method add a soldier to the army
