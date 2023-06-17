@@ -1,5 +1,6 @@
 package it.cascella.esercizio1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Army {
@@ -59,15 +60,27 @@ public class Army {
     }
 
     public Soldier findOldestSoldier(){
-        for (Army soldato: soldiers
-             ) {
-
+        Soldier oldest = null;
+        for (Soldier soldato: soldiers) {
+            if (oldest == null) {
+                oldest = soldato;
+            }
+            if (soldato.getAge() > oldest.getAge()) {
+                oldest = soldato;
+            }
         }
-        return null;
+        return oldest;
     }
 
     public List<Soldier> findAllSoldierYoungerThan(int limitAge){
-        return null;
+        List <Soldier> soldatiMinori= new ArrayList();
+        for (Soldier soldato: soldiers) {
+            if(soldato.getAge()<=limitAge){
+                soldatiMinori.add(soldato);
+            }
+
+        }
+        return soldatiMinori;
     }
 
     /**
