@@ -18,9 +18,12 @@ public class Soldier {
     private String name;
     private String surname;
     private int age;
-    private String rank;
+    private int rank;
 
-    public Soldier(String name, String surname, int age, String rank) {
+    public Soldier() {
+    }
+
+    public Soldier(String name, String surname, int age, int rank) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -51,11 +54,11 @@ public class Soldier {
         this.age = age;
     }
 
-    public String getRank() {
+    public int getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(int rank) {
         this.rank = rank;
     }
 }
