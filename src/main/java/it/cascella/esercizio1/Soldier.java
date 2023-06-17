@@ -24,53 +24,60 @@ public class Soldier {
     }
 
     public Soldier(String name, String surname, int age, int rank) {
-        if(name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Name cannot be null or empty");
-        }
-        if(surname == null || surname.isEmpty()) {
-            throw new IllegalArgumentException("surname cannot be null or empty");
-        }
-        if(age<18) {
-            throw new IllegalArgumentException("age must be higher than 18");
-        }
-        if(rank<=0) {
-            throw new IllegalArgumentException("rank cannot be negative");
-        }
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.rank = rank;
+        setName(name);
+        setSurname(surname);
+        setAge(age);
+        setRank(rank);
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public final void setName(String name) {
+        if(name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty");
+        }
         this.name = name;
     }
 
-    public String getSurname() {
+    public final String getSurname() {
+
         return surname;
     }
 
-    public void setSurname(String surname) {
+    public final void setSurname(String surname) {
+        if(surname == null || surname.isEmpty()) {
+            throw new IllegalArgumentException("surname cannot be null or empty");
+        }
         this.surname = surname;
     }
 
-    public int getAge() {
+    public final int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public final void setAge(int age) {
+        if(age<18) {
+            throw new IllegalArgumentException("age must be higher than 18");
+        }
         this.age = age;
     }
 
-    public int getRank() {
+    public final int getRank() {
         return rank;
     }
 
-    public void setRank(int rank) {
+    public final void setRank(int rank) {
+        if(rank<=0) {
+            throw new IllegalArgumentException("rank cannot be negative");
+        }
         this.rank = rank;
+    }
+    public void degrade(){
+        if(rank==1) {
+            throw new IllegalArgumentException("rank cannot be negative");
+        }
+        rank--;
     }
 }

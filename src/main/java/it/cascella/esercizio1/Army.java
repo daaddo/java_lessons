@@ -89,6 +89,11 @@ public class Army {
      * @param newRank
      */
     public void promote(int baseRank, int newRank){
+        for (Soldier soldato: soldiers){
+            if(soldato.getRank()==baseRank){
+                soldato.setRank(newRank);
+            }
+        }
 
     }
 
@@ -98,6 +103,17 @@ public class Army {
      * @param soldiers
      */
     public void degradate(List<Soldier> soldiers){
-
+        for (Soldier esterno: this.soldiers){
+            for (Soldier interno : soldiers){
+                if(interno.getName().equals(esterno.getName())&&interno.getSurname().equals(esterno.getSurname())){
+                    if(interno.getRank()==1){
+                        System.out.println(interno.getName()+"è stato bimbominchizzato");
+                    }
+                    else{
+                        interno.degrade();
+                    }
+                }
+            }
+        }
     }
 }
