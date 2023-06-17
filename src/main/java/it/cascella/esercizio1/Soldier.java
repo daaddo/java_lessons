@@ -1,5 +1,18 @@
 package it.cascella.esercizio1;
 
+
+/**
+ * A soldier cant contain null or empty name and surname and age must be > 18, and rank > 1
+ * If any of this condition is met, an IllegalArgumentException is thrown
+ * example of how trhow an exception:
+ * <pre>
+ *     {@code
+ *       if(name == null || name.isEmpty()){
+ *              throw new IllegalArgumentException("Name cannot be null or empty");
+ *       }
+ *    }
+ *</pre>
+ */
 public class Soldier {
 
     private String name;
@@ -7,7 +20,7 @@ public class Soldier {
     private int age;
     private String rank;
 
-public Soldier(String name, String surname, int age, String rank) {
+    public Soldier(String name, String surname, int age, String rank) {
         this.name = name;
         this.surname = surname;
         this.age = age;
