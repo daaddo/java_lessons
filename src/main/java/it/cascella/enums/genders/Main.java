@@ -2,7 +2,13 @@ package it.cascella.enums.genders;
 
 public class Main {
     public static void main(String[] args) {
-        Person p = new Person("GIno","Gini", Gender.MASCHIO);
+        Person gino = new Person("Gino","Gini", Gender.INUTILE);
+
+        System.out.println(gino.getName()+" è di sesso: " + gino.getGender());
+
+        System.out.println("The gender of "+gino.getName()+" is " + gino.getGender().getEnglishGender());
+
+
 
     }
 }
