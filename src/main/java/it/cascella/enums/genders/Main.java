@@ -13,5 +13,9 @@ public class Main {
         System.out.println(pio);
 
 
+        Person simoncino = new Person("Simone", "Carlotti", Gender.MASCHIO, 1984);
+        System.out.println("Simoncino è di sesso: " + simoncino.getGender() +" e fa parte della generazione: " + simoncino.getGeneration());
+
+
     }
 }

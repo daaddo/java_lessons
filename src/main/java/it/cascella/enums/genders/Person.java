@@ -12,6 +12,15 @@ public class Person {
         this.generation = generation;
     }
 
+    public Person(String name, String surname, Gender gender, int yearOfBirth) {
+        this.name = name;
+        this.surname = surname;
+        this.gender = gender;
+        this.generation = Generation.of(yearOfBirth);
+    }
+
+
+
     @Override
     public String toString() {
         return "Person{" +
