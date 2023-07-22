@@ -1,6 +1,6 @@
 package it.cascella.inheritance;
 
-public class Lavoratore extends Person{
+public non-sealed class Lavoratore extends Person{
 
     private String work;
 

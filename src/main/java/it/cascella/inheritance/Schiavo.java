@@ -1,6 +1,6 @@
 package it.cascella.inheritance;
 
-public class Schiavo extends Person{
+public final class Schiavo extends Person{
 
     private int slaveryYears;
 

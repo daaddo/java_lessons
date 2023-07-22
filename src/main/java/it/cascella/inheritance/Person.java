@@ -1,6 +1,6 @@
 package it.cascella.inheritance;
 
-public abstract class Person {
+public sealed abstract class Person permits Lavoratore, Schiavo {
 
     private String name;
     private String surname;
