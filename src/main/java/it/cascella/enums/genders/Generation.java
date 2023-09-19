@@ -32,7 +32,7 @@ public enum Generation {
         }
     }
 
-    public int getStart() {
+    public int getStart()  {
         return start;
     }
 
