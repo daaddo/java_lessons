@@ -1,4 +1,4 @@
-package it.cascella.genericiAIUTOVIPREGO.esercitazione;
+package it.cascella.genericiAIUTOVIPREGO.esercitazione.first;
 
 public class Pair<T,S>{
     private T first;
