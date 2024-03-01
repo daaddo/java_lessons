@@ -31,6 +31,26 @@ public class Calcolatrice {
         }
         return days;
     }
+
+    //write a method tha return the number of days
+
+    public int getOre() {
+        return ore;
+    }
+
+    public void setOre(int ore) {
+        this.ore = ore;
+    }
+
+    public int getMinuti() {
+        return minuti;
+    }
+
+    public void setMinuti(int minuti) {
+        this.minuti = minuti;
+    }
+
+    
     public static void main(String[] args) {
         Calcolatrice calcolatrice = new Calcolatrice(4, 48);
         calcolatrice.moltiplicaTempo(500);
