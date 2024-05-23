@@ -4,6 +4,21 @@ public class BST {
     private Node root=null;
     private int count;
 
+    public void ciclicInsert(Node node){
+        root.insertNode(node);
+    }
+    public void deleteNode(int value){
+        if (find(value) && (root != null)) {
+                if (root.getValue() == value) {
+                    Node left = root.getLeft();
+                    root = root.getRight();
+                    root.insertNode(left);
+                    return;
+                }
+                root.deleteNode(value);
+
+        }
+    }
 
     public boolean find(int value){
         return root.find(value);

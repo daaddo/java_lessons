@@ -9,14 +9,30 @@ public class Main {
             bst.insert(value);
         }*/
         bst.insert(50);
-        bst.insert(40);
-        bst.insert(60);
+        bst.insert(45);
+        bst.insert(47);
+        bst.insert(46);
+        bst.insert(48);
+        bst.insert(49);
+        bst.insert(42);
+        bst.insert(33);
+        bst.insert(5);
+        bst.insert(43);
+        bst.insert(39);
         bst.insert(70);
         bst.insert(10);
         bst.insert(20);
         bst.insert(100);
         bst.insert(80);
         bst.insert(65);
+        bst.insert(55);
+        bst.insert(52);
+        bst.insert(57);
+        bst.insert(56);
+        bst.insert(58);
+        bst.insert(59);
+        bst.insert(54);
+        bst.insert(53);
         bst.preVisit();
         System.out.println("Post-------------------Visita");
         bst.postVisit();
@@ -27,7 +43,8 @@ public class Main {
         System.out.println("Max-------------------");
         System.out.println(bst.getMax());
         System.out.println("find");
-        System.out.println(bst.find(63));
+        bst.deleteNode(20);
+        bst.inVisit();
     }
 
 }

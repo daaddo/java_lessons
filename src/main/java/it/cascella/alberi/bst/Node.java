@@ -2,12 +2,21 @@ package it.cascella.alberi.bst;
 
 public class Node {
     private int value;
+
     private Node left = null;
     private Node right = null;
-
     public Node(int value) {
         this.value = value;
     }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
+
     //preOrder
     public void preVisita(Node root){
         if (root !=null){
@@ -15,6 +24,9 @@ public class Node {
             preVisita(root.left);
             preVisita(root.right);
         }
+    }
+    public int getValue() {
+        return value;
     }
     public void inVisita(Node root){
         if (root !=null){
@@ -85,4 +97,72 @@ public class Node {
         return left==null && right==null;
     }
 
+    public void deleteNode(int value) {
+        if (left!=null && value == left.getValue()){
+            if (left.isLeaf()){
+                left = null;
+                return;
+            }
+            if (left.getRight() != null) {
+                Node toUnion = left.getRight();
+                toUnion.insertNode(left.getLeft());
+                left = toUnion;
+            }
+            else{
+                left = left.getLeft();
+            }
+        }
+        else if (right!=null&&value == right.getValue()){
+            if (right.isLeaf()){
+                right = null;
+                return;
+            }
+            if (right.getLeft() != null) {
+                Node toUnion = right.getLeft();
+                toUnion.insertNode(right.getRight());
+                right = toUnion;
+            }
+            else{
+                right = right.getRight();
+            }
+        }
+        else if (value<this.value){
+            left.deleteNode(value);
+        }
+        else if (value>this.value){
+            right.deleteNode(value);
+        }
+    }
+
+    public Node getAllRight() {
+        if(right !=null){
+            return getAllRight();
+        }
+        return this;
+    }
+
+    public Node getAllLeft() {
+        if(left !=null){
+            return getAllLeft();
+        }
+        return this;
+    }
+
+    public void insertNode(Node node) {
+        if (node.getValue() <value){
+            if (left == null){
+                left = node;
+            }
+            else {
+                left.insertNode(node);
+            }
+        }else{
+            if (right == null){
+                right = node;
+            }
+            else{
+                right.insertNode(node);
+            }
+        }
+    }
 }
