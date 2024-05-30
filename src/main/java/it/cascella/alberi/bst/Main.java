@@ -3,15 +3,10 @@ package it.cascella.alberi.bst;
 public class Main {
     public static void main(String[] args) {
         BST bst = new BST();
-        /*while(true){
-            System.out.println("inserisci numero");
-
-            bst.insert(value);
-        }*/
-        bst.insert(50);
-        bst.insert(45);
-        bst.insert(47);
         bst.insert(46);
+        bst.insert(48);
+        bst.insert(48);
+        bst.insert(48);
         bst.insert(48);
         bst.insert(49);
         bst.insert(42);
@@ -23,15 +18,7 @@ public class Main {
         bst.insert(10);
         bst.insert(20);
         bst.insert(100);
-        bst.insert(80);
-        bst.insert(65);
-        bst.insert(55);
-        bst.insert(52);
-        bst.insert(57);
-        bst.insert(56);
-        bst.insert(58);
-        bst.insert(59);
-        bst.insert(54);
+        bst.insert(102);
         bst.insert(53);
         bst.preVisit();
         System.out.println("Post-------------------Visita");
@@ -43,7 +30,7 @@ public class Main {
         System.out.println("Max-------------------");
         System.out.println(bst.getMax());
         System.out.println("find");
-        bst.deleteNode(20);
+        bst.deleteNode(48);
         bst.inVisit();
     }
 

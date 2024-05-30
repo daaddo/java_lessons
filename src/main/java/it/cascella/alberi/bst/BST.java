@@ -8,7 +8,8 @@ public class BST {
         root.insertNode(node);
     }
     public void deleteNode(int value){
-        if (find(value) && (root != null)) {
+        while (root.find(value)) {
+            if ((root != null)) {
                 if (root.getValue() == value) {
                     Node left = root.getLeft();
                     root = root.getRight();
@@ -17,6 +18,7 @@ public class BST {
                 }
                 root.deleteNode(value);
 
+            }
         }
     }
 

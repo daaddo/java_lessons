@@ -1,0 +1,11 @@
+1) creare interfaccia state e inserire un metodo per tutti gli eventi esistenti
+2) creare la classe chje necessita degli state
+3) implementare nella classe ogni metodo, con nomme uguale, dell interfaccia
+4) creare una variabile State
+5) chiamare il metodo state.evento all intenrno di ogni evento
+6) creare una classe, per ogni stato, che implementa l interfaccia state
+7) creare un metodo per ogni evento
+8) creare una variabile task per ogni stato
+9) creare un metodo per cambiare lo stato
+10) implementare solo i metodi necessari
+11) lanciare eccezioni per gli eventi non previsti
