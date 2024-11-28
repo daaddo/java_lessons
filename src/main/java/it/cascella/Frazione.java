@@ -24,7 +24,7 @@ public class Frazione {
         this.numeratore = numeratore;
         this.denominatore = denominatore;
     }
-    public void sum(Frazione that){
+    public Frazione sum(Frazione that){
         int a = this.numeratore;
         int b = this.denominatore;
         int c = that.numeratore;
@@ -32,9 +32,9 @@ public class Frazione {
 
         this.denominatore= that.denominatore*this.denominatore;
         this.numeratore= (this.denominatore/b*a)+(this.denominatore/d*c);
-
+        return this;
     }
-    public void simplify(){
+    public Frazione simplify(){
         if(this.numeratore == this.denominatore){
             this.numeratore = 1;
             this.denominatore = 1;
@@ -54,16 +54,19 @@ public class Frazione {
                 }
             }
         }
+        return this;
     }
-    public void moltiplicazione(Frazione that){
+    public Frazione moltiplicazione(Frazione that){
         this.numeratore=this.numeratore*that.numeratore;
         this.denominatore=this.denominatore*that.denominatore;
         this.simplify();
+        return this;
     }
-    public void divisione(Frazione that){
+    public Frazione divisione(Frazione that){
         this.numeratore=this.numeratore*that.denominatore;
         this.denominatore=this.denominatore*that.numeratore;
         this.simplify();
+        return this;
     }
     @Override
     public String toString() {
@@ -71,4 +74,14 @@ public class Frazione {
 
     }
 
+    public static void main(String[] args) {
+        Frazione a = new Frazione(15,11);
+        Frazione b = new Frazione(27,13);
+        Frazione c = new Frazione(53,12);
+        Frazione f = new Frazione(21,5);
+        a.sum(b);
+
+
+        System.out.println(a.sum(b).moltiplicazione(c).divisione(f).simplify());
+    }
 }

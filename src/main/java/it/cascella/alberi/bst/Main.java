@@ -3,6 +3,7 @@ package it.cascella.alberi.bst;
 public class Main {
     public static void main(String[] args) {
         BST bst = new BST();
+        
         bst.insert(46);
         bst.insert(48);
         bst.insert(48);

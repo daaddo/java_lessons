@@ -3,7 +3,7 @@ package it.cascella.paolo;
 public class Main {
     //replica forza4
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        /*System.out.println("Hello World!");
         //crea forza 4 tramite matrici che però non tiene conto delle vittorie in trasversale
         Persona[][] forza4 = new Persona[6][7];
         //crea giocatori
@@ -33,7 +33,9 @@ public class Main {
             }
             System.out.println();
         }
-        System.out.println("è il turno di " + attuale.getNome());
+        System.out.println("è il turno di " + attuale.getNome());*/
+        int a ;
+
     }
 
 }
